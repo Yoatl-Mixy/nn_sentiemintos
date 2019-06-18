@@ -1,4 +1,4 @@
-train_big=['busco casa en polanco',
+train_big=['llama a un uber',
 'eres muy amable',
 'que es paython',
 'dame un sandwich',
@@ -7,7 +7,7 @@ train_big=['busco casa en polanco',
 
 target_big=[0,1,2,3,4,5]
 
-clase=[('busco casa en polanco','servicial'),
+clase=[('llama a un uber','servicial'),
 ('eres muy amable','alago'),
 ('que es paython','buscando'),
 ('dame un sandwich','duda'),
@@ -54,7 +54,7 @@ text_clf = Pipeline([('vect', CountVectorizer()),
  ])
 text_clf.fit(train_big, target_big) 
 vec=CountVectorizer()
-joblib.dump(text_clf, "Clasificacion_link_home_revimex.pkl")
+joblib.dump(text_clf, "clsf_feels.pkl")
 
 while 1:
 	x = input('Usuario: ')
